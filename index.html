@@ -1,455 +1,170 @@
 <!DOCTYPE html>
-<!--
-  ============================================================
-  Crime Scene Awareness – investigation.html (Page 2)
-  Course: B.Sc Forensic Science
-  Description: Detailed investigation process page with step
-               cards, evidence types grid, and tools list.
-  ============================================================
--->
 <html lang="en">
 
 <head>
-    <!-- Character encoding and responsive viewport -->
+    <!-- ── Meta & SEO ────────────────────────────── -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO Meta Tags -->
     <meta name="description"
-        content="Step-by-step crime scene investigation process – from securing the scene to court presentation, evidence types, and forensic tools." />
-    <meta name="keywords"
-        content="crime scene steps, forensic investigation, evidence collection, fingerprint powder, biological evidence, digital evidence" />
-    <meta name="author" content="B.Sc Forensic Science Student" />
+        content="Crime Scene Awareness – an educational website explaining crime scene investigation in simple, academic language." />
+    <title>Crime Scene Awareness | Home</title>
 
-    <title>Investigation Process | Crime Scene Awareness</title>
-
-    <!-- External Stylesheet (same CSS file as Home page) -->
+    <!-- ── External Stylesheet ──────────────────── -->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Favicon -->
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>" />
 </head>
 
 <body>
 
-    <!-- ===========================================================
-         NAVIGATION BAR  (identical structure to index.html)
-         =========================================================== -->
-    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
-        <div class="container">
-
-            <!-- Brand / logo -->
-            <a class="navbar-brand" href="index.html" aria-label="Crime Scene Awareness Home">
-                <div class="brand-icon" aria-hidden="true">🔍</div>
-                Crime Scene Awareness
-            </a>
-
-            <!-- Hamburger toggle (mobile) -->
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"
-                aria-controls="navMenu">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </button>
+    <!-- ════════════════════════════════════════════
+       HEADER / STICKY NAVIGATION
+       ════════════════════════════════════════════ -->
+    <header>
+        <nav aria-label="Main navigation">
+            <!-- Brand / logo text -->
+            <a href="index.html" class="nav-brand">🔎 Crime Scene Awareness</a>
 
             <!-- Navigation links -->
-            <ul class="navbar-nav" id="navMenu" role="list">
-                <li><a href="index.html">🏠 Home</a></li>
-                <li><a href="investigation.html">🔬 Investigation</a></li>
+            <ul class="nav-links">
+                <li><a href="index.html" id="nav-home">Home</a></li>
+                <li><a href="investigation.html" id="nav-invest">Investigation</a></li>
             </ul>
+        </nav>
+    </header>
 
-        </div><!-- /.container -->
-    </nav><!-- /.navbar -->
 
-    <!-- ===========================================================
-         PAGE HEADER BANNER
-         =========================================================== -->
-    <header class="page-header" id="page-top" role="banner">
-        <div class="container">
-            <h1>Step-by-Step Crime Scene Investigation Process</h1>
-            <p>
-                A structured overview of how forensic scientists and investigators
-                work systematically to uncover the truth.
-            </p>
-        </div>
-    </header><!-- /.page-header -->
+    <!-- ════════════════════════════════════════════
+       HERO SECTION
+       ════════════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+        <h1 id="hero-heading">Crime Scene Awareness &amp; Investigation</h1>
 
-    <!-- ===========================================================
-         MAIN CONTENT
-         =========================================================== -->
-    <main id="main-content">
+        <p>
+            Understanding how crime scenes are investigated,
+            preserved, and analysed — step by step.
+        </p>
 
-        <!-- ---------------------------------------------------
-             SECTION 1 – Investigation Steps (Card Grid)
-             Each card represents a phase of CSI.
-             --------------------------------------------------- -->
-        <section class="section section-light" id="steps" aria-labelledby="steps-title">
-            <div class="container">
+        <!-- Button navigates to investigation.html via JS -->
+        <button class="btn-primary" id="explore-btn" aria-label="Go to Investigation Process page">
+            Explore Investigation Process →
+        </button>
+    </section>
 
-                <h2 class="section-title center fade-in" id="steps-title">
-                    The Investigation Process
-                </h2>
-                <p class="section-subtitle center fade-in">
-                    Every crime scene investigation follows a disciplined sequence of phases
-                    to ensure evidence integrity and legal admissibility.
+
+    <!-- ════════════════════════════════════════════
+       SECTION 1 — What is Crime Scene Investigation?
+       ════════════════════════════════════════════ -->
+    <main>
+        <section class="section" id="what-is-csi" aria-labelledby="csi-heading">
+            <h2 class="section-title" id="csi-heading">What is Crime Scene Investigation?</h2>
+
+            <!-- fade-in class makes JS animate this on scroll -->
+            <div class="fade-in">
+                <p>
+                    Crime Scene Investigation (CSI) is a systematic process in which trained forensic professionals
+                    collect, document, and analyse physical evidence found at the location of a crime. The goal is
+                    to reconstruct the events that occurred and to identify the individuals responsible.
                 </p>
-
-                <!-- 6-card grid – one card per investigation step -->
-                <div class="steps-grid" role="list">
-
-                    <!-- Step 1 – Securing the Crime Scene -->
-                    <article class="step-card fade-in" role="listitem" aria-label="Step 1: Securing the Crime Scene">
-                        <span class="step-number" aria-hidden="true">01</span>
-                        <div class="step-icon" aria-hidden="true">🚧</div>
-                        <h3>Securing the Crime Scene</h3>
-                        <p>
-                            The very first and most critical step is establishing a perimeter using
-                            barrier tape or officers to prevent unauthorised access. Contamination
-                            by civilians, media, or even unnecessary personnel can destroy fragile
-                            evidence like footprints, fibres, or latent fingerprints.
-                        </p>
-                        <p>
-                            Investigators record the names of every person who enters the scene to
-                            maintain a strict chain of custody from the very beginning.
-                        </p>
-                    </article><!-- /.step-card -->
-
-                    <!-- Step 2 – Documentation & Photography -->
-                    <article class="step-card fade-in" role="listitem"
-                        aria-label="Step 2: Documentation and Photography">
-                        <span class="step-number" aria-hidden="true">02</span>
-                        <div class="step-icon" aria-hidden="true">📷</div>
-                        <h3>Documentation &amp; Photography</h3>
-                        <p>
-                            Before anything is touched, investigators create a complete visual and
-                            written record of the scene. High-resolution photographs are taken from
-                            wide-angle (overview), mid-range, and close-up perspectives to capture
-                            the scene's context and specific evidence items.
-                        </p>
-                        <p>
-                            Detailed sketches, 3D scanning, and written notes document the position
-                            of every object, allowing investigators to reconstruct the scene later
-                            in court with precision.
-                        </p>
-                    </article><!-- /.step-card -->
-
-                    <!-- Step 3 – Evidence Collection -->
-                    <article class="step-card fade-in" role="listitem" aria-label="Step 3: Evidence Collection">
-                        <span class="step-number" aria-hidden="true">03</span>
-                        <div class="step-icon" aria-hidden="true">🧤</div>
-                        <h3>Evidence Collection</h3>
-                        <p>
-                            Trained technicians methodically collect physical, biological, trace,
-                            and digital evidence using proper tools such as forceps, swabs, and
-                            evidence lifters. Each item is handled with gloves to prevent DNA
-                            transfer from investigators to samples.
-                        </p>
-                        <p>
-                            Items are collected in a predetermined pattern (grid, zone, or spiral)
-                            to ensure thorough coverage of every area without missing overlooked
-                            details in corners or beneath objects.
-                        </p>
-                    </article><!-- /.step-card -->
-
-                    <!-- Step 4 – Packaging & Labeling -->
-                    <article class="step-card fade-in" role="listitem" aria-label="Step 4: Packaging and Labeling">
-                        <span class="step-number" aria-hidden="true">04</span>
-                        <div class="step-icon" aria-hidden="true">📦</div>
-                        <h3>Packaging &amp; Labeling</h3>
-                        <p>
-                            Each piece of evidence is placed in an appropriate container — paper
-                            bags for biological samples (to allow breathing and prevent mould),
-                            sealed plastic bags for dry physical items, or rigid containers for
-                            fragile objects — and labelled with case number, date, time, and
-                            the collecting officer's name.
-                        </p>
-                        <p>
-                            Proper packaging prevents cross-contamination between samples and
-                            preserves evidence until it reaches the laboratory.
-                        </p>
-                    </article><!-- /.step-card -->
-
-                    <!-- Step 5 – Laboratory Analysis -->
-                    <article class="step-card fade-in" role="listitem" aria-label="Step 5: Laboratory Analysis">
-                        <span class="step-number" aria-hidden="true">05</span>
-                        <div class="step-icon" aria-hidden="true">🔬</div>
-                        <h3>Laboratory Analysis</h3>
-                        <p>
-                            Evidence is transported to a certified forensic laboratory where
-                            specialists perform a wide range of tests: DNA profiling, toxicology
-                            screens, ballistics matching, fingerprint comparison using AFIS, and
-                            chemical analysis of substances.
-                        </p>
-                        <p>
-                            Laboratory findings are documented in comprehensive reports that detail
-                            the methods used, results obtained, and scientific conclusions drawn —
-                            all in standardised formats accepted by courts of law.
-                        </p>
-                    </article><!-- /.step-card -->
-
-                    <!-- Step 6 – Court Presentation -->
-                    <article class="step-card fade-in" role="listitem" aria-label="Step 6: Court Presentation">
-                        <span class="step-number" aria-hidden="true">06</span>
-                        <div class="step-icon" aria-hidden="true">⚖️</div>
-                        <h3>Court Presentation</h3>
-                        <p>
-                            Forensic experts present their findings to the court as expert witnesses.
-                            They explain complex scientific concepts in clear, understandable language
-                            for judges and juries, while withstanding cross-examination from
-                            defence attorneys who may challenge methodology or conclusions.
-                        </p>
-                        <p>
-                            The credibility of evidence in court depends entirely on how well
-                            every preceding step was executed — making flawless documentation
-                            and chain-of-custody records indispensable.
-                        </p>
-                    </article><!-- /.step-card -->
-
-                </div><!-- /.steps-grid -->
-
-            </div><!-- /.container -->
-        </section><!-- /#steps -->
-
-        <!-- ---------------------------------------------------
-             SECTION 2 – Types of Evidence (Grid)
-             --------------------------------------------------- -->
-        <section class="section section-grey" id="evidence-types" aria-labelledby="evidence-title">
-            <div class="container">
-
-                <h2 class="section-title center fade-in" id="evidence-title">
-                    Types of Evidence
-                </h2>
-                <p class="section-subtitle center fade-in">
-                    Forensic investigators encounter several categories of evidence,
-                    each handled with specific techniques.
+                <p>
+                    The process begins the moment law enforcement secures the perimeter of a scene to prevent
+                    contamination. Every piece of evidence — from fingerprints and footwear impressions to biological
+                    samples and digital records — is methodically recorded before it is collected.
                 </p>
-
-                <div class="evidence-grid" role="list">
-
-                    <!-- Evidence Type 1 – Physical -->
-                    <article class="evidence-card fade-in" role="listitem" aria-label="Physical Evidence">
-                        <div class="evidence-icon" aria-hidden="true">🔑</div>
-                        <h3>Physical Evidence</h3>
-                        <p>
-                            Tangible objects found at the scene — weapons, tools, clothing, glass
-                            fragments, and footwear impressions. These items can be directly
-                            compared against reference samples to establish links between suspects
-                            and the crime location.
-                        </p>
-                    </article><!-- /.evidence-card -->
-
-                    <!-- Evidence Type 2 – Biological -->
-                    <article class="evidence-card fade-in" role="listitem" aria-label="Biological Evidence">
-                        <div class="evidence-icon" aria-hidden="true">🧬</div>
-                        <h3>Biological Evidence</h3>
-                        <p>
-                            Organic material such as blood, saliva, semen, hair, and skin cells
-                            that can yield DNA profiles. Biological evidence must be preserved at
-                            low temperatures to prevent degradation and contamination that could
-                            invalidate test results.
-                        </p>
-                    </article><!-- /.evidence-card -->
-
-                    <!-- Evidence Type 3 – Trace -->
-                    <article class="evidence-card fade-in" role="listitem" aria-label="Trace Evidence">
-                        <div class="evidence-icon" aria-hidden="true">🔎</div>
-                        <h3>Trace Evidence</h3>
-                        <p>
-                            Minute particles transferred between people or objects during contact —
-                            fibres, glass shards, paint chips, soil, pollen, and gunshot residue.
-                            Trace evidence supports the Locard Exchange Principle: every contact
-                            leaves a trace.
-                        </p>
-                    </article><!-- /.evidence-card -->
-
-                    <!-- Evidence Type 4 – Digital -->
-                    <article class="evidence-card fade-in" role="listitem" aria-label="Digital Evidence">
-                        <div class="evidence-icon" aria-hidden="true">💻</div>
-                        <h3>Digital Evidence</h3>
-                        <p>
-                            Data extracted from electronic devices — smartphones, computers, CCTV
-                            recordings, GPS logs, and social media activity. Cybercrime specialists
-                            use write-blockers and forensic imaging tools to copy data without
-                            altering the original storage device.
-                        </p>
-                    </article><!-- /.evidence-card -->
-
-                </div><!-- /.evidence-grid -->
-
-            </div><!-- /.container -->
-        </section><!-- /#evidence-types -->
-
-        <!-- ---------------------------------------------------
-             SECTION 3 – Tools Used in Investigation
-             Dark background section for visual variety.
-             --------------------------------------------------- -->
-        <section class="section section-dark" id="tools" aria-labelledby="tools-title">
-            <div class="container">
-
-                <h2 class="section-title center fade-in" id="tools-title">
-                    Tools Used in Investigation
-                </h2>
-                <p class="section-subtitle center fade-in">
-                    Forensic investigators rely on a precise set of instruments to
-                    collect, preserve, and analyse evidence safely and accurately.
+                <p>
+                    Investigators work closely with forensic scientists, medical examiners, and legal authorities
+                    to ensure that the chain of custody is maintained throughout the investigation. This chain of
+                    custody is a critical legal requirement: it proves that evidence has not been tampered with
+                    between the scene and the courtroom.
                 </p>
-
-                <div class="tools-list" role="list">
-
-                    <!-- Tool 1 – Gloves -->
-                    <div class="tool-item fade-in" role="listitem" aria-label="Gloves">
-                        <div class="tool-icon" aria-hidden="true">🧤</div>
-                        <div>
-                            <strong>Gloves (Nitrile / Latex)</strong>
-                            <p>
-                                Worn at all times during evidence handling to prevent DNA transfer
-                                from the investigator to the sample, and to protect the officer from
-                                potentially hazardous biological material. Gloves are changed between
-                                separate evidence items to avoid cross-contamination.
-                            </p>
-                        </div>
-                    </div><!-- /.tool-item -->
-
-                    <!-- Tool 2 – Evidence Bags -->
-                    <div class="tool-item fade-in" role="listitem" aria-label="Evidence Bags">
-                        <div class="tool-icon" aria-hidden="true">📦</div>
-                        <div>
-                            <strong>Evidence Bags &amp; Containers</strong>
-                            <p>
-                                Tamper-evident paper bags (for biological samples) and sealed plastic
-                                bags (for dry items) come pre-printed with chain-of-custody fields.
-                                Once sealed with a signature or barcode label, any tampering becomes
-                                immediately visible, protecting evidence integrity from scene to court.
-                            </p>
-                        </div>
-                    </div><!-- /.tool-item -->
-
-                    <!-- Tool 3 – Fingerprint Powder -->
-                    <div class="tool-item fade-in" role="listitem" aria-label="Fingerprint Powder">
-                        <div class="tool-icon" aria-hidden="true">🪄</div>
-                        <div>
-                            <strong>Fingerprint Powder &amp; Brushes</strong>
-                            <p>
-                                Aluminium or carbon-based powders are applied with fine-bristle brushes
-                                to reveal latent fingerprints on non-porous surfaces. Black powder is
-                                used on light surfaces; white powder on dark ones. Developed prints are
-                                photographed and lifted using adhesive tape before being compared to
-                                known reference prints via the AFIS database.
-                            </p>
-                        </div>
-                    </div><!-- /.tool-item -->
-
-                    <!-- Tool 4 – UV / Alternate Light Source -->
-                    <div class="tool-item fade-in" role="listitem" aria-label="UV Light">
-                        <div class="tool-icon" aria-hidden="true">🔦</div>
-                        <div>
-                            <strong>UV Light &amp; Alternate Light Source (ALS)</strong>
-                            <p>
-                                Ultraviolet and tunable-wavelength light sources reveal substances
-                                invisible to the naked eye — body fluids (which fluoresce), trace
-                                chemicals, and certain fibres. ALS is a non-destructive first step,
-                                allowing investigators to identify and map evidence before collecting
-                                it with chemical methods.
-                            </p>
-                        </div>
-                    </div><!-- /.tool-item -->
-
-                    <!-- Tool 5 – Camera & Imaging Equipment -->
-                    <div class="tool-item fade-in" role="listitem" aria-label="Camera">
-                        <div class="tool-icon" aria-hidden="true">📷</div>
-                        <div>
-                            <strong>Camera &amp; Forensic Imaging Equipment</strong>
-                            <p>
-                                High-resolution digital SLR cameras with macro lenses, scale rulers,
-                                and colour calibration cards are used to produce legally admissible
-                                photographic records. 3D laser scanners and photogrammetry software
-                                generate accurate crime scene models for courtroom visualisations and
-                                accident-reconstruction analysis.
-                            </p>
-                        </div>
-                    </div><!-- /.tool-item -->
-
-                </div><!-- /.tools-list -->
-
-            </div><!-- /.container -->
-        </section><!-- /#tools -->
-
-        <!-- ---------------------------------------------------
-             CALL-TO-ACTION – Back to Home
-             --------------------------------------------------- -->
-        <section class="section section-light" id="cta" style="text-align:center;" aria-label="Return to Home">
-            <div class="container">
-                <h2 class="section-title center fade-in">Explore More</h2>
-                <p class="section-subtitle center fade-in">
-                    Return to the home page to read about what crime scene investigation is
-                    and why awareness of it matters in our society.
+                <p>
+                    Modern CSI relies on advanced technologies such as DNA profiling, digital forensics, 3-D
+                    scanning, and chemical analysis instruments. Combined with sound scientific methodology,
+                    these tools allow investigators to draw reliable conclusions even from microscopic traces
+                    of evidence.
                 </p>
-                <!-- Back to Home button – handled by script.js (backHomeBtn) -->
-                <button class="btn-secondary fade-in" id="backHomeBtn" aria-label="Go back to Home page">
-                    ← Back to Home
-                </button>
             </div>
-        </section><!-- /#cta -->
+        </section>
 
-    </main><!-- /#main-content -->
 
-    <!-- ===========================================================
-         FOOTER  (same structure as index.html)
-         =========================================================== -->
-    <footer class="footer" id="footer" role="contentinfo">
-        <div class="container">
+        <!-- ════════════════════════════════════════════
+         SECTION 2 — Why Crime Scene Awareness Matters
+         ════════════════════════════════════════════ -->
+        <section class="section-alt" id="why-it-matters" aria-labelledby="matter-heading">
+            <div class="section-inner fade-in">
+                <h2 class="section-title" id="matter-heading">Why Crime Scene Awareness Matters</h2>
 
-            <div class="footer-grid">
+                <p>
+                    A crime scene is a fragile, temporary record of what happened. Every person who enters
+                    the area — intentionally or not — risks destroying irreplaceable evidence. Public awareness
+                    of how crime scenes work helps communities cooperate with investigators and avoid
+                    inadvertent contamination.
+                </p>
+                <p>
+                    When bystanders, first responders, or even victims disturb a scene before forensic teams
+                    arrive, critical evidence can be lost forever. Footwear impressions get trampled, fingerprints
+                    are smudged, and biological samples degrade. Awareness training helps reduce these risks.
+                </p>
+                <p>
+                    From a legal perspective, maintaining the integrity of a crime scene directly affects the
+                    admissibility of evidence in court. Improperly handled evidence can cause cases to collapse,
+                    allowing guilty parties to escape justice or leading to wrongful convictions.
+                </p>
+                <p>
+                    Crime scene awareness is therefore not just a professional skill — it is a civic
+                    responsibility. Communities that understand the basics of scene preservation actively
+                    contribute to a more effective and fair justice system.
+                </p>
+            </div>
+        </section>
 
-                <!-- Column 1 – Site info -->
-                <div class="footer-col">
-                    <h4>Crime Scene Awareness</h4>
-                    <p>An educational resource on forensic science and crime scene investigation.</p>
-                </div>
 
-                <!-- Column 2 – Navigation links -->
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="investigation.html">Investigation Process</a></li>
-                        <li><a href="#steps">Investigation Steps</a></li>
-                        <li><a href="#evidence-types">Types of Evidence</a></li>
-                        <li><a href="#tools">Tools Used</a></li>
-                    </ul>
-                </div>
+        <!-- ════════════════════════════════════════════
+         SECTION 3 — About the Author
+         ════════════════════════════════════════════ -->
+        <section class="section" id="about" aria-labelledby="about-heading">
+            <h2 class="section-title" id="about-heading">About the Author</h2>
 
-                <!-- Column 3 – Contact -->
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <p>For academic or educational inquiries:</p>
+            <div class="author-card fade-in" role="region" aria-label="Author information">
+                <!-- Avatar placeholder using emoji -->
+                <div class="author-avatar" aria-hidden="true">👤</div>
+
+                <div>
+                    <h3>Your Name</h3>
+                    <p class="role">B.Sc Forensic Science — 2026</p>
                     <p>
-                        <a class="footer-email" href="mailto:your.email@example.com">
-                            your.email@example.com
-                        </a>
+                        I am a forensic science student with a keen interest in crime scene management,
+                        evidence analysis, and the application of scientific principles within the criminal
+                        justice system. This website was created as an educational resource to spread
+                        awareness about the importance of proper crime scene investigation procedures.
                     </p>
                 </div>
-
-            </div><!-- /.footer-grid -->
-
-            <!-- Copyright bar -->
-            <div class="footer-bottom">
-                <p>
-                    &copy; <span>2026</span> Crime Scene Awareness.
-                    Created for B.Sc Forensic Science educational purposes.
-                </p>
             </div>
+        </section>
+    </main>
 
-        </div><!-- /.container -->
-    </footer><!-- /.footer -->
 
-    <!-- Scroll-to-top floating button -->
-    <button id="scrollTopBtn" title="Scroll to top" aria-label="Scroll back to top">↑</button>
+    <!-- ════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════ -->
+    <footer>
+        <div class="footer-inner">
+            <!-- Footer navigation links -->
+            <ul class="footer-links" aria-label="Footer navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="investigation.html">Investigation</a></li>
+                <li><a href="mailto:your.email@example.com">Contact Us</a></li>
+            </ul>
 
-    <!-- External JavaScript (deferred) -->
-    <script src="script.js" defer></script>
+            <!-- Contact email placeholder -->
+            <p>📧 your.email@example.com</p>
 
+            <!-- Copyright notice -->
+            <p>&copy; 2026 Crime Scene Awareness. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- ── External JavaScript (loaded last so DOM is ready) ── -->
+    <script src="script.js"></script>
 </body>
 
 </html>
